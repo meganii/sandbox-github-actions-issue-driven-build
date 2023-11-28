@@ -1,0 +1,16 @@
+name: Issue Event Workflow
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+
+jobs:
+  checkIssue:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Issue
+      run: |
+        echo "Issue event triggered"
