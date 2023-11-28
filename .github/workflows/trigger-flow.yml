@@ -8,6 +8,7 @@ on:
 
 jobs:
   checkIssue:
+    if: ${{ github.event.label.name == 'Published' }}
     runs-on: ubuntu-latest
 
     steps:
