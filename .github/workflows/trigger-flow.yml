@@ -3,12 +3,11 @@ name: Issue Event Workflow
 on:
   issues:
     types:
-      - opened
-      - edited
+      - labeled
 
 jobs:
   checkIssue:
-    if: ${{ github.event.label.name == 'Published' }}
+    if: ${{ github.event.label.name == 'published' }}
     runs-on: ubuntu-latest
 
     steps:
